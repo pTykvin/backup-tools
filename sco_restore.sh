@@ -20,7 +20,7 @@ ddOptions="bs=100M conv=notrunc"
 srcRestore="/samba/anonymous/backup/sco"
 
 # Compress transfer with LZO
-lzop="lzop -dc -v"
+lzop="lzop -dc"
 
 # Create lv if not exists
 force=yes

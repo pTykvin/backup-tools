@@ -17,10 +17,10 @@ email=
 ddOptions="bs=100M conv=notrunc"
 
 # Actual location on the storage server
-srcRestore="/samba/anonymous/backup/start"
+srcRestore="/share/backup/start"
 
 # Compress transfer with LZO
-lzop="lzop -dc -v"
+lzop="lzop -dc"
 
 # Create lv if not exists
 force=yes
@@ -36,7 +36,7 @@ _log () {
 _error() {
 	_log "ERROR: $1"
 	_log "---------------------------------"
-	echo "ERROR: $1" |mail -s "ERROR: $1 on $(hostname)" $email
+#	echo "ERROR: $1" |mail -s "ERROR: $1 on $(hostname)" $email
 	exit 1
 }
 
